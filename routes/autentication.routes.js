@@ -1,4 +1,4 @@
-// *! RECUERDA QUE ESTAS EN LA RAMA ROUTES-AND-MODULES
+// *! RECUERDA QUE ESTAS EN LA RAMA QUERYS-TO-DATABASE
 
 import Router from 'express';
 import { autenticationController } from '../controller/autentication.controller.js';
@@ -6,7 +6,7 @@ import { autenticationController } from '../controller/autentication.controller.
 const router = Router();
 
 router.post('/usuarios', autenticationController.createUser);
-router.post('/login');
-router.get('/usuarios');
+router.post('/login', autenticationController.loginUser);
+router.get('/usuarios', autenticationController.getUsersInfo);
 
 export default router;
